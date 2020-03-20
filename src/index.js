@@ -21,7 +21,7 @@ let incomid = null;
 
 function authenticate(req, res, next) {
   var incomingToken = req.header("Authorization");
-  jwt.verify(incomingToken, "jdjfhdjfhdksffjdshgfdjshf", function(
+  jwt.verify(incomingToken, "jdjfhdjfhdksffjdshgfdjshfa", function(
     err,
     decoded
   ) {
@@ -95,7 +95,7 @@ app.post("/login", function(req, res) {
                 date: "foobar",
                 userId
               },
-              "jdjfhdjfhdksffjdshgfdjshf",
+              "jdjfhdjfhdksffjdshgfdjshfa",
               function(err, token) {
                 if (err) throw err;
                 res.json({
